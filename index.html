@@ -1,87 +1,169 @@
 ﻿<html>
 <head>
-    <title>Mi Perfil</title>
+    <title>Kokua</title>
     <style>
-        .header {
-            text-align: center;
-            height: 300px;
-            padding: 12px;
-            background-image: url("https://fondosmil.com/fondo/9911.jpg");
-        }
-        .avatar{
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-        }
-        .user-name{
-            font-size: 30px;
-            margin-top: 24px;
-        }
-        .socials {
-            list-style: none;
-            text-align:center;
-            text-underline-offset:auto;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
             padding: 0;
-            font-size: 25px;
+            background-color: #f5f5f5;
         }
-        .socials li{
-            display: inline-block;
-            margin: 5px;
+
+        header {
+            background: linear-gradient(45deg, #53CA96, #33B2A6);
+            color: white;
+            padding: 20px;
+            text-align: center;
         }
-        a{
+
+        header h1 {
+            font-size: 36px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(45deg, #53CA96, #33B2A6);
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
             text-decoration: none;
-            color: cornflowerblue;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
         }
-        a:hover{
-            color: darkblue;
+
+        nav a:hover {
+            background: linear-gradient(45deg, #33B2A6, #1D9AAE);
         }
-        .icon{
-            width: 16px;
-            height: 16px;
-            display: inline-block;
-            background-size: cover;
+
+        .page {
+            display: none;
+            padding: 40px;
         }
-        .email {
-            background-image: src("D:\Sistemas Distribuidos\google.png");
+
+        .page.active {
+            display: block;
+            animation: fadeIn 1s;
         }
-        .facebook {
-            background-image: ssrc("D:\Sistemas Distribuidos\css3-alt.png");
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
-        .twitter {
-            background-image: url("D:\Sistemas Distribuidos\google.png");
+
+        .content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h1, h2, h3 {
+            color: #53CA96;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        a {
+            color: #53CA96;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+        h1{
+            color: white;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <img class="avatar" src="FotoP.jpg"/>
-        <h1 class="user-name">KOKUA</h1>
+    <header>
+        <h1>KOKUA</h1>
+        <p>TU MAYOR FORTUNA</p>
+    </header>
+    <nav>
+        <a href="#home">Inicio</a>
+        <a href="#about">Acerca de Nosotros</a>
+        <a href="#services">Servicios</a>
+        <a href="#contact">Contacto</a>
+    </nav>
+    <div id="home" class="page active">
+        <div class="content">
+            <h2> Bienvenido a KOKUA S.A. de C.V.</h2>
+            <p>Nos presentamos como una empresa de desarrollo de software </p>
+            <p>la cual tiene como propósito el beneficio comunitario a travéz de la tencnología</p>
+            <img src="IMAGENES/KOKUA.png" width="400" height="300" alt="Nuestra Oficina">
+        </div>
     </div>
-    <ul class="socials">
-        <li>
-            <i class="icon email"></i>
-            <h3>MISION</h3>
-               Nos presentamos como una
-            <br>empresa de desarrollo de software
-            <br>la cual tiene como propósito
-            <br>el beneficio comunitario a
-            <br>travéz de la tencnología</br>
-        </li>
-        <li>
-            <h3>ESLOGAN</h3>
-            <br> KOKUA TU MAYOR 
-            <br>FORTUNA</br>
-        </li>
-        <li>
-            <h3>VISION</h3>
-            <br>Convertinos en una empresa
-            <br>de gran influencia en la sociedad
-            <br>mientras busca el beneficio de la misma.</br>
+    <div id="about" class="page">
+        <div class="content">
+            <h2>Acerca de Nosotros</h2>
+            <p>Llevar acabo el desarrollo de proyectos de manera ordenada, organizada y respetuosa.</p>
+            <p>Así cómo el cumplimiento de fechas y acuerdos relacionados con los anteriores.</p>
+            <p>Enfocado en beneficio y desarrollo  de la sociedad, así como la inclusión sin limitante</p>
+            <br>
+            <img src="IMAGENES/KOKUA.png" width="400" height="300" alt="Nuestro Equipo">
+        </div>
+    </div>
+    <div id="services" class="page">
+        <div class="content">
+            <h2>Nuestros Servicios</h2>
+            <ul>
+                <li>Desarrollo Web</li>
+                <li>Aplicaciones Móviles</li>
+                <li>Consultoría Tecnológica</li>
+                <li>Diseño de Experiencia de Usuario</li>
+            </ul>
+            <p>Ofrecemos servicios de alta calidad que ayudarán a tu empresa a prosperar en el mundo digital. Contáctanos para saber cómo podemos ayudarte.</p>
+        </div>
+    </div>
+    <div id="contact" class="page">
+        <div class="content">
+            <h2>Contacto</h2>
+            <p>Si deseas obtener más información sobre nuestros servicios o hacernos algun
+                a consulta, no dudes en contactarnos.</p>
+            <a href="mailto:info@acme-solutions.com">priximamente@gmail.com</a>
+            <br><br>
+            <img src="IMAGENES/KOKUA.png" width="400" height="300" alt="Nuestra Oficina">
+        </div>
+    </div>
+    
+    <script>
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
 
-        </li>
-    </ul>
-    <div>
+            const page = document.getElementById(pageId);
+            page.classList.add('active');
+        }
+
         
-    </div>
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                showPage(link.getAttribute('href').substring(1));
+            });
+        });
+
+       
+        showPage('home');
+    </script>
 </body>
 </html>
